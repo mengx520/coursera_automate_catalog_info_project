@@ -43,3 +43,30 @@ cat ~/supplier-data/descriptions/007.txt
 
 The first line contains the name of the fruit followed by the weight of the fruit and finally the description of the fruit.
 
+## Working with supplier images
+In this section, you will write a Python script named changeImage.py to process the supplier images. You will be using the PIL library to update all images within ~/supplier-data/images directory to the following specifications:
+
+Size: Change image resolution from 3000x2000 to 600x400 pixel
+Format: Change image format from .TIFF to .JPEG
+Create and open the file using nano editor.
+
+nano ~/changeImage.py
+Add a shebang line in the first line.
+
+#!/usr/bin/env python3
+This is the challenge section, where you will be writing a script that satisfies the above objectives.
+
+Note: The raw images from images subdirectory contains alpha transparency layers. So, it is better to first convert RGBA 4-channel format to RGB 3-channel format before processing the images. Use convert("RGB") method for converting RGBA to RGB image.
+After processing the images, save them in the same path ~/supplier-data/images, with a JPEG extension.
+
+Once you have completed editing the changeImage.py script, save the file by clicking Ctrl-o, Enter key, and Ctrl-x.
+
+Grant executable permissions to the changeImage.py script.
+
+sudo chmod +x ~/changeImage.py
+Now run the changeImage.py script:
+
+./changeImage.py
+Now, let's check the specifications of the images you just updated. Open any image using the following command:
+
+file ~/supplier-data/images/003.jpeg
